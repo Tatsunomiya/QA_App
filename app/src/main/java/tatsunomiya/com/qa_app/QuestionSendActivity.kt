@@ -19,14 +19,12 @@ import android.util.Base64
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityCompat.requestPermissions
-import androidx.core.app.ActivityCompat.startActivityForResult
-import androidx.core.content.ContextCompat.getSystemService
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import kotlinx.android.synthetic.main.activity_login.progressBar
 import kotlinx.android.synthetic.main.activity_question_send.*
 import tatsunomiya.com.qa_app.Const.Companion.ContentsPATH
 import tatsunomiya.com.qa_app.Const.Companion.NameKEY
@@ -53,7 +51,7 @@ private var mGenre: Int = 0
 //        mGenre = extras.getInt("genre")
 
         val extras = intent.extras
-        mGenre = extras.getInt("genre")
+        mGenre = extras!!.getInt("genre")
 
 
         title = "質問作成"
@@ -244,7 +242,7 @@ override fun onClick(v: View) {
 
         data["title"] = title
         data["body"] = body
-        data["name"] = name
+        data["name"] = name ?: ""
 
         // 添付画像を取得する
         val drawable = imageView.drawable as? BitmapDrawable

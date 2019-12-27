@@ -12,7 +12,7 @@ import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_login.*
-import tatsunomiya.com.qa_app.Const.Companion.NameKey
+import tatsunomiya.com.qa_app.Const.Companion.NameKEY
 import tatsunomiya.com.qa_app.Const.Companion.UsersPath
 
 
@@ -173,7 +173,7 @@ class LoginActivity : AppCompatActivity() {
 
             val sp = PreferenceManager.getDefaultSharedPreferences(this)
             val editor = sp.edit()
-            editor.putString(NameKey, name)
+            editor.putString(NameKEY, name)
 
             editor.commit()
 

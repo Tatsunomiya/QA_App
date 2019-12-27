@@ -48,7 +48,6 @@
         android:layout_marginTop="4dp"
         android:text="ログイン"
         android:id="@+id/loginButton"
-        android:backgroud="@drawable/custom_button"
         android:textColor="@color/colorButtonText"  />
 
         <Button
@@ -57,7 +56,6 @@
             android:layout_marginTop="4dp"
             android:text="アカウント作成"
             android:id="@+id/createButton"
-            android:backgroud="@drawable/custom_button"
             android:textColor="@color/colorButtonText" />
 
 

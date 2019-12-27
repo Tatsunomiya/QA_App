@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:fitsSystemWindow="true"
+    android:fitsSystemWindows="true"
     tools:context=".MainActivity"
 
 
@@ -15,15 +15,14 @@
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/appTheme.AppBarOverlay" >
+        android:theme="@style/AppTheme.AppBarOverlay" >
 
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroud="@color/colorPrimary"
-            app:popupTheme="@style/appTheme.PopupOverlay"/>
+            app:popupTheme="@style/AppTheme.AppBarOverlay"/>
 
 
     </android.support.design.widget.AppBarLayout>
@@ -36,7 +35,7 @@
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_graity="bottom}end"
+        android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
         android:src="@drawable/plus"  ></android.support.design.widget.FloatingActionButton>
 
